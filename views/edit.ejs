@@ -1,0 +1,29 @@
+<!-- views/edit.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../stylesheets/style.css">
+    <title>Edit Post</title>
+</head>
+<body>
+    <header>
+        <h1>Hazel's Blog</h1>
+        <nav>
+            <p style="margin: 20px;">&copy; Hazel's blog. All rights reserved.</p>
+        </nav>
+    </header>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h1>Edit Post</h1>
+            <form action="/edit/<%= post._id%>?_method=POST" method="POST">
+                <input type="text" name="post[title]" placeholder="Title" value="<%= post.title %>" required>
+                <textarea name="post[content]" placeholder="Content" required><%= post.content %></textarea>
+                <button type="submit">Update</button>
+                <a href="/">Back</a>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
