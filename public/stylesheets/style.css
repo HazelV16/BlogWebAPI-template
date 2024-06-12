@@ -193,17 +193,18 @@ button[type='submit']:hover {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 764px;
-    height: 491px;
+    height: 460px;
     background-color: white;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    z-index: 100;
-    overflow: auto;
+    /* z-index: 100; */
+    overflow: scroll;
+    margin-top: 30px;
 }
 
 .modal-content {
-    padding: 20px;
+    padding: 0px 20px 10px 20px;
 }
 
 h2 {
